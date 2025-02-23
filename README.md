@@ -2,7 +2,7 @@
 
 /*
 * Project: Incubyte TDD Project
-* Author: [Your Name]
+* Author: Melson S
 * Description: A Flutter-based String Calculator using Test-Driven Development (TDD).
   */
 // File Structure
