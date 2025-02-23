@@ -28,4 +28,8 @@ void main() {
     final calculator = StringCalculator();
     expect(calculator.add("//;\n1;2"), 3);
   });
+  test('should throw exception for negative numbers', () {
+    final calculator = StringCalculator();
+    expect(() => calculator.add("1,-2,3,-4"), throwsException);
+  });
 }
