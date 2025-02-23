@@ -1,16 +1,37 @@
 # incubyte_ttd_project
 
+/*
+* Project: Incubyte TDD Project
+* Author: [Your Name]
+* Description: A Flutter-based String Calculator using Test-Driven Development (TDD).
+  */
+// File Structure
+  incubyte_ttd_project/
+  │── lib/
+  │   ├── main.dart
+  │   ├── calculator.dart
+  │   ├── home_screen.dart
+  │── test/
+  │   ├── calculator_test.dart
+  │── README.md
+  │── pubspec.yaml
+
+
+// ======================== README.md ========================
+/*
+# Incubyte TDD Project
+
 A new Flutter project.
 
 ## Getting Started
 
 This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+##
+1. Flutter Version : 3.24.3
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+1. Clone the Repository
+   ```sh
+   git clone https://github.com/Melson007/incubyte_ttd_project
+   cd incubyte_tdd_project
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
