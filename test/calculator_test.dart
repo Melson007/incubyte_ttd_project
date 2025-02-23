@@ -20,4 +20,8 @@ void main() {
     final calculator = StringCalculator();
     expect(calculator.add("1,2,3,4"), 10);
   });
+  test('should handle newline as a separator', () {
+    final calculator = StringCalculator();
+    expect(calculator.add("1\n2,3"), 6);
+  });
 }
