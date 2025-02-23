@@ -9,19 +9,21 @@ class StringCalculator {
     if (numbers.startsWith('//')) {
       int newlineIndex = numbers.indexOf('\n');
       String customDelimiter = numbers.substring(2, newlineIndex);
-      delimiter = RegExp(
-          RegExp.escape(customDelimiter)); // Properly handle custom delimiters
+      delimiter = RegExp(RegExp.escape(customDelimiter)); // Escape properly
       numbers = numbers.substring(newlineIndex + 1);
     }
 
-    // Ensure no empty elements before parsing
+    // Ensure valid input before parsing
     List<String> elements =
         numbers.split(delimiter).where((e) => e.isNotEmpty).toList();
 
     List<int> negatives = [];
     int sum = 0;
+
     for (String element in elements) {
-      int number = int.tryParse(element) ?? 0; // Prevent FormatException
+      int? number = int.tryParse(element); // Prevent FormatException
+      if (number == null) continue; // Skip invalid entries
+
       if (number < 0) {
         negatives.add(number);
       } else {
@@ -33,9 +35,6 @@ class StringCalculator {
       throw Exception("Negative numbers not allowed: ${negatives.join(', ')}");
     }
 
-    if (negatives.isNotEmpty) {
-      throw Exception("Negative numbers not allowed: ${negatives.join(', ')}");
-    }
     return sum;
   }
 }
